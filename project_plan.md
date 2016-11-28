@@ -19,4 +19,4 @@ Tree gets an annual increase in area and performs optimization to decide which a
   - MVP: constant area per year
   - maybe function of area dependent on current area and year, more factors (like sun)
 - optimization
-  - how
+  - 
