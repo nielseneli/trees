@@ -10,16 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32245,        660]
-NotebookOptionsPosition[     31299,        624]
-NotebookOutlinePosition[     31644,        639]
-CellTagsIndexPosition[     31601,        636]
+NotebookDataLength[     34427,        758]
+NotebookOptionsPosition[     32967,        702]
+NotebookOutlinePosition[     33312,        717]
+CellTagsIndexPosition[     33269,        714]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["define variables", "Subsubsection",
+ CellChangeTimes->{{3.690324840666604*^9, 3.690324854169104*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{"xc", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
@@ -34,59 +39,134 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{"xmax", ",", " ", "ymax"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
+  RowBox[{"npts", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"ri", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"kg", " ", "=", " ", "2.1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"rg", " ", "=", " ", 
    RowBox[{"ri", " ", "*", "kg"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"initialcircle", " ", "=", " ", 
-  RowBox[{"CirclePoints", "[", 
-   RowBox[{"ri", ",", " ", "1"}], "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"gradient", "=", " ", 
-  RowBox[{"Grad", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"Sin", "[", 
-      RowBox[{"0.3", "x"}], "]"}], 
-     RowBox[{"Sin", "[", 
-      RowBox[{"0.5", "y"}], "]"}]}], ",", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"gradient", " ", "/.", " ", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"x", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"1", ",", "2"}], "}"}]}], ",", 
-     RowBox[{"y", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"1", ",", "2"}], "}"}]}]}], "}"}]}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{{3.6899644748614006`*^9, 3.689964563048689*^9}, {
-  3.6899646065067873`*^9, 3.689964732674498*^9}, {3.68996480490316*^9, 
-  3.6899648056023703`*^9}, {3.6899648416041665`*^9, 3.6899648747030935`*^9}, {
-  3.6899657279171314`*^9, 3.6899657462779675`*^9}, {3.689965816121951*^9, 
-  3.6899658809154296`*^9}, {3.689965958679205*^9, 3.689966004312767*^9}, {
-  3.6899661016364985`*^9, 3.68996619146048*^9}, {3.689966226154949*^9, 
-  3.689966239609295*^9}, {3.6899662766089945`*^9, 3.689966281037437*^9}, {
-  3.6899663947528076`*^9, 3.6899664093762693`*^9}, {3.689966484879819*^9, 
-  3.6899665158339148`*^9}, {3.6899665814564734`*^9, 3.689966667774104*^9}, {
-  3.6899667182781544`*^9, 3.689966918995224*^9}, {3.6899669892972536`*^9, 
-  3.6899670822265425`*^9}}],
+  RowBox[{"sunnyshady", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Sin", "[", 
+     RowBox[{"0.3", "x"}], "]"}], 
+    RowBox[{"Sin", "[", 
+     RowBox[{"0.5", "y"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"initialcircle", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"CirclePoints", "[", 
+     RowBox[{"ri", ",", " ", "10"}], "]"}], "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"gradbound", " ", "=", " ", 
+  RowBox[{"Map", "[", 
+   RowBox[{"gradient", ",", " ", "initialcircle"}], "]"}]}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwl0V1IUwEAxfHbCpNSKRctlmY2cxYKa5ab2rSNbJaIy1C2CUrDryHMMHQy
+r/MrEGfMrEaiazRyoKibbtUwb4IwISQiAtMHMZP8IDNjMSjR9J67h8OP8/yP
+1VTnl7EIgkikB3seFenDjBvSBfPdVtgr+tQOGy2WZ3B01foC2m54GAsKkh1w
+sqlwEMapdtnhtFEr2SdhyNrBGJicE82HYdSsAApYphQoLH4lg1LqVy5UBq7n
+Mzb9uQOXySdK6BLGqiDBUVbA8iOJWmjgW2ugzmWoY+xzGmHddH0H7F993wWX
+5r8OQG7b4Bj8kil/B31xA8JjtAo1dQXeE29nQM5ekgw2X9AORdLq9d4xGGWu
+eQM1a9fGYcLm40k4nMr7ALtDzyxCt8m9Dn+0JGxCGVHqh6fs1m0Y+lK6BwUP
+vx9n0255Paeh0SA6C3Pkn0XB77gaVJ4F/5nPK4POaqBPMF0BK+0/KyGZR1bD
+y7rDDZCVfqgZzi9+fADfqiSdcPl1SjfMzPKOQseQZAJSI33nTtBWHcjmQfXR
+SD6sz/BfhDK7OW2CtjDvlgSKx8vlMGJKfBOqFOwSqPvrqYW3e10G6Gt1dsHf
+HM5TSLLJHuj2Pw+haL/t9DMuqZ1caGubYVTw5njwkq0xnmK6msqg6T5XC2Pm
+KAv8Hwgw7gPo1k5H
+  "]],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"{", 
-   RowBox[{"0", ",", "1"}], "}"}], "}"}]], "Output",
- CellChangeTimes->{
-  3.6899661926145954`*^9, 3.6899662411974535`*^9, 3.689966282813615*^9, {
-   3.6899663987212043`*^9, 3.6899664106954017`*^9}, {3.6899664959939303`*^9, 
-   3.6899665166879997`*^9}, {3.6899666426925964`*^9, 3.689966663538681*^9}, {
-   3.689966767561082*^9, 3.689966834282754*^9}, {3.689966878809206*^9, 
-   3.689966920383363*^9}, 3.689967045279848*^9, {3.689967083382658*^9, 
-   3.6899671019215117`*^9}}],
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.3`", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"0.3`", " ", "x"}], "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"0.5`", " ", "y"}], "]"}]}], ",", 
+      RowBox[{"0.5`", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"0.5`", " ", "y"}], "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"0.3`", " ", "x"}], "]"}]}]}], "}"}], "[", 
+    RowBox[{
+     FractionBox["1", "4"], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", 
+       SqrtBox["5"]}], ")"}]}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.3`", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"0.3`", " ", "x"}], "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"0.5`", " ", "y"}], "]"}]}], ",", 
+      RowBox[{"0.5`", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"0.5`", " ", "y"}], "]"}], " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"0.3`", " ", "x"}], "]"}]}]}], "}"}], "[", 
+    RowBox[{"-", 
+     SqrtBox[
+      RowBox[{
+       FractionBox["5", "8"], "+", 
+       FractionBox[
+        SqrtBox["5"], "8"]}]]}], "]"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.689980222711632*^9, 3.6899802495152035`*^9}, 
+   3.690322394416185*^9, 3.6903225085778465`*^9, {3.6903226814735665`*^9, 
+   3.6903227094663506`*^9}, {3.690322752206962*^9, 3.6903228227757826`*^9}, {
+   3.6903229579062195`*^9, 3.6903229825892167`*^9}, 3.690323027297615*^9, 
+   3.6903230779861336`*^9, 3.690323116266905*^9, 3.6903241836760263`*^9, {
+   3.6903242596730604`*^9, 3.6903242782055607`*^9}, {3.6903247837391043`*^9, 
+   3.690324809606604*^9}, 3.6903251687662888`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["define functions to use", "Subsubsection",
+ CellChangeTimes->{{3.690324862036604*^9, 3.6903248649091043`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"findGradient", "[", 
+   RowBox[{"scalarFunc_", ",", "vars_"}], "]"}], ":=", 
+  RowBox[{"Grad", "[", 
+   RowBox[{"scalarFunc", ",", "vars"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.690324655054104*^9, 3.690324726039104*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"gradthing", "[", 
+   RowBox[{"gradient_", ",", "xx_", ",", "yy_"}], "]"}], ":=", 
+  RowBox[{"gradient", "/.", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "\[Rule]", " ", "xx"}], ",", 
+     RowBox[{"y", "\[Rule]", "yy"}]}], "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.6903244550541306`*^9, 3.690324527339473*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["find gradient", "Subsubsection",
+ CellChangeTimes->{{3.690324884216604*^9, 3.690324885899104*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gradSunnyShady", "=", 
+  RowBox[{"findGradient", "[", 
+   RowBox[{"sunnyshady", ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]], "Input"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -101,30 +181,27 @@ Cell[BoxData[
      RowBox[{"0.5`", " ", "y"}], "]"}], " ", 
     RowBox[{"Sin", "[", 
      RowBox[{"0.3`", " ", "x"}], "]"}]}]}], "}"}]], "Output",
- CellChangeTimes->{
-  3.6899661926145954`*^9, 3.6899662411974535`*^9, 3.689966282813615*^9, {
-   3.6899663987212043`*^9, 3.6899664106954017`*^9}, {3.6899664959939303`*^9, 
-   3.6899665166879997`*^9}, {3.6899666426925964`*^9, 3.689966663538681*^9}, {
-   3.689966767561082*^9, 3.689966834282754*^9}, {3.689966878809206*^9, 
-   3.689966920383363*^9}, 3.689967045279848*^9, {3.689967083382658*^9, 
-   3.6899671019235115`*^9}}],
+ CellChangeTimes->{3.690324902056604*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gradthing", "[", 
+  RowBox[{"gradient", ",", "2", ",", "2"}], "]"}]], "Input"],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"0.13740381325418757`", ",", "0.20834879180252333`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"0.1296716900261154`", ",", "0.1525388151832137`"}], "}"}]}], 
+  RowBox[{"0.20834879180252333`", ",", "0.1525388151832137`"}], 
   "}"}]], "Output",
- CellChangeTimes->{
-  3.6899661926145954`*^9, 3.6899662411974535`*^9, 3.689966282813615*^9, {
-   3.6899663987212043`*^9, 3.6899664106954017`*^9}, {3.6899664959939303`*^9, 
-   3.6899665166879997`*^9}, {3.6899666426925964`*^9, 3.689966663538681*^9}, {
-   3.689966767561082*^9, 3.689966834282754*^9}, {3.689966878809206*^9, 
-   3.689966920383363*^9}, 3.689967045279848*^9, {3.689967083382658*^9, 
-   3.6899671019255123`*^9}}]
+ CellChangeTimes->{3.690324925666627*^9}]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["draw things", "Subsubsection",
+ CellChangeTimes->{{3.690324890099104*^9, 3.6903248920491037`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -621,6 +698,7 @@ Cell[BoxData[
  RowBox[{"{", "}"}]], "Output",
  CellChangeTimes->{3.689966023082644*^9, 3.6899661160869436`*^9}]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{784, 842},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -639,28 +717,48 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 2270, 54, 240, "Input"],
-Cell[2853, 78, 520, 10, 30, "Output"],
-Cell[3376, 90, 814, 19, 30, "Output"],
-Cell[4193, 111, 671, 14, 30, "Output"]
+Cell[580, 22, 107, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[712, 27, 2095, 51, 221, "Input"],
+Cell[2810, 80, 1703, 47, 122, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4901, 130, 273, 5, 30, "Input"],
-Cell[5177, 137, 172, 3, 374, "Output"]
+Cell[4562, 133, 116, 1, 39, "Subsubsection"],
+Cell[4681, 136, 260, 6, 30, "Input"],
+Cell[4944, 144, 351, 9, 30, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5386, 145, 604, 17, 30, "Input"],
-Cell[5993, 164, 12172, 213, 370, "Output"]
+Cell[5332, 158, 104, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[5461, 163, 185, 5, 30, "Input"],
+Cell[5649, 170, 433, 13, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[18202, 382, 313, 6, 50, "Input"],
-Cell[18518, 390, 12202, 213, 370, "Output"]
+Cell[6119, 188, 102, 2, 30, "Input"],
+Cell[6224, 192, 155, 4, 30, "Output"]
+}, Open  ]]
 }, Open  ]],
-Cell[30735, 606, 96, 1, 30, InheritFromParent],
-Cell[30834, 609, 94, 1, 30, InheritFromParent],
 Cell[CellGroupData[{
-Cell[30953, 614, 216, 3, 30, "Input"],
-Cell[31172, 619, 111, 2, 30, "Output"]
+Cell[6428, 202, 104, 1, 39, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[6557, 207, 273, 5, 30, "Input"],
+Cell[6833, 214, 172, 3, 374, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7042, 222, 604, 17, 30, "Input"],
+Cell[7649, 241, 12172, 213, 370, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19858, 459, 313, 6, 50, "Input"],
+Cell[20174, 467, 12202, 213, 370, "Output"]
+}, Open  ]],
+Cell[32391, 683, 96, 1, 30, "Input"],
+Cell[32490, 686, 94, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[32609, 691, 216, 3, 30, "Input"],
+Cell[32828, 696, 111, 2, 30, "Output"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
