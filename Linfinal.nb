@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     35187,        746]
-NotebookOptionsPosition[     34001,        700]
-NotebookOutlinePosition[     34327,        715]
-CellTagsIndexPosition[     34284,        712]
+NotebookDataLength[     41497,        936]
+NotebookOptionsPosition[     39746,        871]
+NotebookOutlinePosition[     40072,        886]
+CellTagsIndexPosition[     40029,        883]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -57,79 +57,88 @@ Cell[BoxData[{
    RowBox[{"CirclePoints", "[", 
     RowBox[{"ri", ",", " ", "10"}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJwl0W1IU2EAxfHrChOzKBctlmV2rVlUrFluvUzbyGaJuQzHtqBw5MsIZhg5
-mddpGkRLZlYj0TUaOVKsTTdrmFchmCARYYLph/CN0qisWIxKKn3O3YfDj/P5
-n2IoLyjmURS1jwy23D5nTrB+Uby3F9XDVunIDVjjcNyH3XPOh9B1IsBZWJju
-gYO1mk6YqvvHX0NM+pizEcbOr0iG6blbRDCBHRNDMc+WASXne5VQwX7Lg9rI
-8QLO2p9n4SxzVwt9khQdpATaUlgSv8cILSJnBTT5LJWcbV4rrByqugnb54ab
-4PTEVAcUNnT2wHdZqgEYSu2QrCOq9exBeFm2mAkFS3uVsG6XsSuRaDYHe2CS
-veI5NMwf64NpC3cG4ZND9GvYHLd1Evpt/k/w87W0BaikLobhJrdzEcY9UixB
-ceOH9Xzi92BgM7RapNtgrmpUGv2eo1FV2fCPfYc26pgBhsRDpbDM/bUMMvlM
-OTxgWlUNeUdW1sGJyTfX4Qud/BacfZbRDLOyg93Q0yXvh+zTtu0biJdicmio
-X50oglWZ4d1Q6bYf7idq8k/JoayvRAXXvpSdhDo1/wI0/Q5chWdafRYYqvc2
-wR8CwT3I8JkW6A8/iGWJM3/bOaf1XiF0NbziVNPjNNzvqtnJcl1txdB2RWiE
-yeOsA/6PRDjzfsU/HiAOq2nO08LeEahpjHkLlwHRQV9c
-  "]]
+1:eJwl0V1IUwEAxfG5wsQsylWLZZnNmkXBbZZbH9M2slliLsOxLSga+bGCGYuc
+rOvmRxAtma4cia7RyJFibbpZw7wawgSJCotMH8pslEZmxWJUUtk9dw+HH+f5
+n6atKCphs1gsgh5saTphTDLPSt/YTtfBVtHoFVjtcNyE3dPO29B1KMBYXJzp
+gYMWZSdMV//lLKNN+Zi3BsbPLEqFmfnrBTCJGiMgwbZmQeHJXhmUUl8LoCp6
+sIjR8uM4DJM3VNAnTFNDFldVBksTt+ugSeA0QL3PVMnY5jXDyuGqq7B9eqQR
+Tk2864C8+s4e+DpHPgBD6R3CFbQKDbUbnhfPZ0Puwg4ZrNmq60qmNRqDPTDF
+ZngItTMH+mDG3PVBeG8P/ym0J2yYhH6r/xP8XJsxB2WsMxG41u2chwl3pAuQ
+aPiwkkP7LRhYB80m0UaYL38pin3P/pjyXPjbtlkVc0wLQ8RwGSx3fymHZCFZ
+AXfpl1yC7H2La+DE5PPL8JFacg2GH2TZYU5usBt6uiT9kLrftmkV7bm4PD7U
+LE0WwKrsyDYoc9v29tMqC49IoLivVA6XD4kPQ7WCcwrqfwUuwmOtPhMM1Xkb
+4XcutxmSHLIF+iO34ina93/aGac0Xh501T9hVPDH+XCnq3oLxXS1lkDrBZ4O
+po5TDvgvGmUs+Jl4d4B2RMFnPMrrHYXKhrgXMPy21rDaMit95nvM2GwfssCz
+Ta8Y/wPoZ3Bv
+  "]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exGrad", "=", 
+  RowBox[{"Grad", "[", 
+   RowBox[{
+    RowBox[{"funcSunnyShady", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.690507328224081*^9, 3.690507355298902*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"0.3`", " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"0.3`", " ", "x"}], "]"}], " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"0.5`", " ", "y"}], "]"}]}], ",", 
+   RowBox[{"0.5`", " ", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"0.5`", " ", "y"}], "]"}], " ", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"0.3`", " ", "x"}], "]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6905073443071747`*^9, 3.6905073563716707`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["define functions to use", "Subsubsection",
- CellChangeTimes->{{3.690324862036604*^9, 3.6903248649091043`*^9}}],
+Cell[BoxData[
+ RowBox[{"exGrad", "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"initialcircle", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+    RowBox[{"y", "\[Rule]", 
+     RowBox[{"initialcircle", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.6905074000199823`*^9, 3.690507418522172*^9}}],
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"funcSunnyShady", "[", 
-   RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+ RowBox[{"{", 
   RowBox[{
-   RowBox[{"Sin", "[", 
-    RowBox[{".3", "x"}], "]"}], 
-   RowBox[{"Sin", "[", 
-    RowBox[{".5", "y"}], "]"}]}]}]], "Input",
- CellChangeTimes->{{3.690325849731134*^9, 3.690325871250811*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"findGradPoints", "[", 
-   RowBox[{"scalarFunc_", ",", "circlePoints_", ",", "x_", ",", "y_"}], "]"}],
-   ":=", 
-  RowBox[{
-   RowBox[{"Grad", "[", 
-    RowBox[{
-     RowBox[{"scalarFunc", "[", 
-      RowBox[{"x", ",", "y"}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "/.", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"x", "\[Rule]", 
-      RowBox[{"circlePoints", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-     RowBox[{"y", "\[Rule]", 
-      RowBox[{"circlePoints", "[", 
-       RowBox[{"[", 
-        RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]}]], "Input",
- CellChangeTimes->{{3.690327733399808*^9, 3.690327858209607*^9}}]
+   RowBox[{"-", "0.13675269374321897`"}], ",", "0.04115077800384018`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.690507419046262*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["\<\
-find the gradient evaluated at points around circle (cartesian)\
-\>", "Subsubsection",
- CellChangeTimes->{{3.690326734104047*^9, 3.690326737561265*^9}, {
-  3.69032807697911*^9, 3.690328104297097*^9}}],
-
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"listPoints", "=", 
-  RowBox[{"findGradPoints", "[", 
-   RowBox[{"funcSunnyShady", ",", "initialcircle", ",", "x", ",", "y"}], 
-   "]"}]}]], "Input",
- CellChangeTimes->{{3.69032786617889*^9, 3.690327892171782*^9}, {
-  3.690327949667356*^9, 3.6903279571829777`*^9}}],
+ RowBox[{"exGrad", "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "\[Rule]", 
+     RowBox[{"initialcircle", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+    RowBox[{"y", "\[Rule]", 
+     RowBox[{"initialcircle", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.690507358932417*^9, 3.6905073932370996`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -152,9 +161,168 @@ Cell[BoxData[
      RowBox[{"-", "0.14776010333066977`"}], ",", 
      RowBox[{"-", "0.11501242071207522`"}], ",", 
      RowBox[{"-", "0.04115077800384018`"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.690507394586906*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["define functions to use", "Subsubsection",
+ CellChangeTimes->{{3.690324862036604*^9, 3.6903248649091043`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"funcSunnyShady", "[", 
+   RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"Sin", "[", 
+    RowBox[{".3", "x"}], "]"}], 
+   RowBox[{"Sin", "[", 
+    RowBox[{".5", "y"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.690325849731134*^9, 3.690325871250811*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"findGradPoints", "[", 
+   RowBox[{"scalarFunc_", ",", "circlePoints_", ",", "x_", ",", "y_"}], "]"}],
+   ":=", "\[IndentingNewLine]", 
+  RowBox[{"Transpose", "[", 
+   RowBox[{
+    RowBox[{"Grad", "[", 
+     RowBox[{
+      RowBox[{"scalarFunc", "[", 
+       RowBox[{"x", ",", "y"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "\[Rule]", 
+       RowBox[{"circlePoints", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+      RowBox[{"y", "\[Rule]", 
+       RowBox[{"circlePoints", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.690327733399808*^9, 3.690327858209607*^9}, {
+  3.690507205409244*^9, 3.690507218689246*^9}, {3.6905072495059557`*^9, 
+  3.690507295676264*^9}, {3.6905083629650784`*^9, 3.6905083768248043`*^9}, {
+  3.690509042241108*^9, 3.6905090999976807`*^9}}],
+
+Cell["\<\
+findGradPoints is now a transpose so it yields a list like \
+{{x1,y1},{x2,y2},...,{xn,yn}} rather than {{x1,x1,...,xn},{y1,y2,...,yn}}\
+\>", "Text",
+ CellChangeTimes->{{3.690509228962988*^9, 3.690509279831758*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"findMaxPoint", "[", 
+   RowBox[{"listCirclePoints_", ",", "listGradPoints_"}], "]"}], ":=", 
+  RowBox[{"Partition", "[", 
+   RowBox[{
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"listCirclePoints", "[", 
+        RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+      RowBox[{"Position", "[", 
+       RowBox[{
+        RowBox[{"Norm", "/@", "listGradPoints"}], ",", 
+        RowBox[{"Max", "[", 
+         RowBox[{"Norm", "/@", "listGradPoints"}], "]"}]}], "]"}]}], "]"}], 
+    ",", "2"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.690509283130151*^9, 3.690509390496093*^9}, {
+  3.6905095628006563`*^9, 3.690509572644145*^9}}],
+
+Cell["\<\
+So, findMaxPoint. This is a thing. Norm/@listGradPoints turns listGradPoints \
+from a list of points to a list of magnitudes.
+Position[listMags, Max[listMags]] finds the position(s) of the max of the list.
+listCirclePoints[[#]]&/@Position yields a list of the position(s) of max of \
+the list.
+Partition[Flatten[positionsList],2] makes the lists not Super Nested, like \
+{{{1,0}},{{-1,0}}} to {{1,0},{-1,0}}\
+\>", "Text",
+ CellChangeTimes->{{3.690509610856101*^9, 3.690509864071795*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["find the point on boundary of circle with maximum gradient", \
+"Subsubsection",
+ CellChangeTimes->{{3.690326734104047*^9, 3.690326737561265*^9}, {
+   3.69032807697911*^9, 3.690328104297097*^9}, {3.6905071391144333`*^9, 
+   3.690507139269473*^9}, {3.69050729761178*^9, 3.6905072987165117`*^9}, 
+   3.690509590753935*^9, {3.690509888423676*^9, 3.690509897841509*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"listPoints", "=", 
+  RowBox[{"findGradPoints", "[", 
+   RowBox[{"funcSunnyShady", ",", "initialcircle", ",", "x", ",", "y"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.69032786617889*^9, 3.690327892171782*^9}, {
+  3.690327949667356*^9, 3.6903279571829777`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.13675269374321897`"}], ",", "0.04115077800384018`"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.08435700567251525`"}], ",", "0.11501242071207522`"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.14776010333066977`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.08435700567251525`", ",", "0.11501242071207522`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.13675269374321897`", ",", "0.04115077800384018`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.13675269374321897`", ",", 
+     RowBox[{"-", "0.04115077800384018`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.08435700567251525`", ",", 
+     RowBox[{"-", "0.11501242071207522`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", 
+     RowBox[{"-", "0.14776010333066977`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.08435700567251525`"}], ",", 
+     RowBox[{"-", "0.11501242071207522`"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "0.13675269374321897`"}], ",", 
+     RowBox[{"-", "0.04115077800384018`"}]}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{
   3.69032789257892*^9, {3.690327954656386*^9, 3.690327957646266*^9}, 
-   3.690328109542589*^9}]
+   3.690328109542589*^9, {3.6905072239124727`*^9, 3.69050729993064*^9}, 
+   3.690508379933813*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"findMaxPoint", "[", 
+  RowBox[{"initialcircle", ",", "listPoints"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6905094009733047`*^9, 3.690509413907899*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6905094144572277`*^9, 3.6905095774336853`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -194,9 +362,10 @@ Cell[BoxData[
     Rational[1, 4] (1 - 5^
      Rational[1, 2]), -(Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
      Rational[1, 2]}}]], "Output",
- CellChangeTimes->{3.6899648354133096`*^9, 3.689964906782714*^9, 
-  3.689965639302271*^9, 3.6899660145267887`*^9, 3.690325442298955*^9, 
-  3.690328109563685*^9}]
+ CellChangeTimes->{
+  3.6899648354133096`*^9, 3.689964906782714*^9, 3.689965639302271*^9, 
+   3.6899660145267887`*^9, 3.690325442298955*^9, 3.690328109563685*^9, 
+   3.69050716345201*^9, {3.690507257294565*^9, 3.690507265428237*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -434,8 +603,9 @@ zVCRX9ZuNBpv7Cfym3lOvpqiee+j6XG8FTyoSzQFOMgzxNbFnfMfq1zJwA==
      Scaled[0.02], 
      Scaled[0.02]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{3.6899654356339064`*^9, 3.68996563179852*^9, 
-  3.690325442454219*^9, 3.690328109596816*^9}]
+ CellChangeTimes->{
+  3.6899654356339064`*^9, 3.68996563179852*^9, 3.690325442454219*^9, 
+   3.690328109596816*^9, {3.69050725744412*^9, 3.690507265503673*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -683,7 +853,8 @@ zVCRX9ZuNBpv7Cfym3lOvpqiee+j6XG8FTyoSzQFOMgzxNbFnfMfq1zJwA==
      Scaled[0.02]}},
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.689965618811222*^9, 3.6899656513804784`*^9}, 
-   3.690325442591358*^9, 3.6903281096417017`*^9}]
+   3.690325442591358*^9, 3.6903281096417017`*^9, {3.690507257455203*^9, 
+   3.69050726560791*^9}}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -716,37 +887,56 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 107, 1, 35, "Subsubsection"],
-Cell[690, 25, 1921, 46, 214, "Input"]
+Cell[690, 25, 1950, 47, 214, "Input"],
+Cell[CellGroupData[{
+Cell[2665, 76, 295, 8, 32, "Input"],
+Cell[2963, 86, 461, 13, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2648, 76, 116, 1, 35, "Subsubsection"],
-Cell[2767, 79, 305, 9, 33, "Input"],
-Cell[3075, 90, 746, 22, 59, "Input"]
+Cell[3461, 104, 428, 12, 35, "Input"],
+Cell[3892, 118, 175, 5, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3858, 117, 210, 4, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[4093, 125, 288, 6, 35, "Input"],
-Cell[4384, 133, 1011, 23, 129, "Output"]
+Cell[4104, 128, 432, 12, 35, "Input"],
+Cell[4539, 142, 937, 21, 72, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5444, 162, 104, 1, 35, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[5573, 167, 273, 5, 35, "Input"],
-Cell[5849, 174, 1207, 24, 374, "Output"]
+Cell[5525, 169, 116, 1, 35, "Subsubsection"],
+Cell[5644, 172, 305, 9, 33, "Input"],
+Cell[5952, 183, 1027, 27, 59, "Input"],
+Cell[6982, 212, 224, 4, 33, "Text"],
+Cell[7209, 218, 683, 18, 83, "Input"],
+Cell[7895, 238, 497, 9, 99, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7093, 203, 604, 17, 35, "Input"],
-Cell[7700, 222, 12232, 215, 367, "Output"]
+Cell[8429, 252, 371, 5, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[8825, 261, 288, 6, 35, "Input"],
+Cell[9116, 269, 1377, 37, 72, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[19969, 442, 313, 6, 51, "Input"],
-Cell[20285, 450, 13273, 235, 367, "Output"]
+Cell[10530, 311, 177, 3, 35, "Input"],
+Cell[10710, 316, 260, 8, 32, "Output"]
+}, Open  ]]
 }, Open  ]],
-Cell[33573, 688, 96, 1, 30, "Input"],
-Cell[33672, 691, 94, 1, 30, "Input"],
-Cell[33769, 694, 216, 3, 30, "Input"]
+Cell[CellGroupData[{
+Cell[11019, 330, 104, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[11148, 335, 273, 5, 35, "Input"],
+Cell[11424, 342, 1279, 25, 374, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12740, 372, 604, 17, 35, "Input"],
+Cell[13347, 391, 12281, 216, 367, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25665, 612, 313, 6, 51, "Input"],
+Cell[25981, 620, 13322, 236, 367, "Output"]
+}, Open  ]],
+Cell[39318, 859, 96, 1, 30, "Input"],
+Cell[39417, 862, 94, 1, 30, "Input"],
+Cell[39514, 865, 216, 3, 30, "Input"]
 }, Open  ]]
 }
 ]
