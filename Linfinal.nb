@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29471,        699]
-NotebookOptionsPosition[     27830,        639]
-NotebookOutlinePosition[     28156,        654]
-CellTagsIndexPosition[     28113,        651]
+NotebookDataLength[     27763,        607]
+NotebookOptionsPosition[     26675,        566]
+NotebookOutlinePosition[     27002,        581]
+CellTagsIndexPosition[     26959,        578]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,26 +25,17 @@ Cell["define variables", "Subsubsection",
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"xc", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"xc", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"yc", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"ptc", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{"xc", ",", "yc"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"ptmax", " ", "=", " ", 
-   RowBox[{"{", 
-    RowBox[{"xmax", ",", " ", "ymax"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"npts", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"ri", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"kg", " ", "=", " ", "2.1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"kg", " ", "=", " ", "1.1"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"rg", " ", "=", " ", 
-   RowBox[{"ri", " ", "*", "kg"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"minDist", "=", "0"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"sunnyshady", " ", "=", " ", 
    RowBox[{
@@ -53,19 +44,25 @@ Cell[BoxData[{
     RowBox[{"Sin", "[", 
      RowBox[{"0.5", "y"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
+  RowBox[{"d", "=", 
+   RowBox[{"rg", "-", 
+    RowBox[{"(", 
+     RowBox[{"ri", "+", "minDist"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rg", " ", "=", " ", 
+   RowBox[{"ri", " ", "*", "kg"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ptc", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"xc", ",", "yc"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"initialCircle", " ", "=", " ", 
    RowBox[{"Circle", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "0"}], "}"}], ",", "ri"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+    RowBox[{"ptc", ",", "ri"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"initialCirclePoints", "=", 
    RowBox[{"CirclePoints", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "0"}], "}"}], ",", "ri", ",", "1000"}], "]"}]}], 
-  ";"}]}], "Input",
+    RowBox[{"ptc", ",", "ri", ",", "npts"}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.6899644748614006`*^9, 3.689964563048689*^9}, {
    3.6899646065067873`*^9, 3.689964732674498*^9}, {3.68996480490316*^9, 
    3.6899648056023703`*^9}, {3.6899648416041665`*^9, 
@@ -100,102 +97,15 @@ Cell[BoxData[{
    3.690327353103611*^9}, {3.690327685628211*^9, 3.690327688048381*^9}, {
    3.6905071560583353`*^9, 3.69050715799021*^9}, {3.690507262049021*^9, 
    3.6905072626426287`*^9}, {3.690509951059801*^9, 3.69051005003004*^9}, 
-   3.690510272109043*^9, {3.690510316279565*^9, 3.6905103331861258`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"exGrad", "=", 
-  RowBox[{"Grad", "[", 
-   RowBox[{
-    RowBox[{"funcSunnyShady", "[", 
-     RowBox[{"x", ",", "y"}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.690507328224081*^9, 3.690507355298902*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"0.3`", " ", 
-    RowBox[{"Cos", "[", 
-     RowBox[{"0.3`", " ", "x"}], "]"}], " ", 
-    RowBox[{"Sin", "[", 
-     RowBox[{"0.5`", " ", "y"}], "]"}]}], ",", 
-   RowBox[{"0.5`", " ", 
-    RowBox[{"Cos", "[", 
-     RowBox[{"0.5`", " ", "y"}], "]"}], " ", 
-    RowBox[{"Sin", "[", 
-     RowBox[{"0.3`", " ", "x"}], "]"}]}]}], "}"}]], "Output",
- CellChangeTimes->{{3.6905073443071747`*^9, 3.6905073563716707`*^9}, {
-  3.6905102739386578`*^9, 3.6905102826371717`*^9}, {3.69051031861792*^9, 
-  3.690510334761043*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"exGrad", "/.", 
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{"x", "\[Rule]", 
-     RowBox[{"initialcircle", "[", 
-      RowBox[{"[", 
-       RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
-    RowBox[{"y", "\[Rule]", 
-     RowBox[{"initialcircle", "[", 
-      RowBox[{"[", 
-       RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]], "Input",
- CellChangeTimes->{{3.6905074000199823`*^9, 3.690507418522172*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"-", "0.12688756027806528`"}], ",", "0.1701150159787812`"}], 
-  "}"}]], "Output",
- CellChangeTimes->{
-  3.690507419046262*^9, {3.690510273965515*^9, 3.690510282659684*^9}, {
-   3.690510318645166*^9, 3.690510334788698*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"exGrad", "/.", 
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{"x", "\[Rule]", 
-     RowBox[{"initialcircle", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-    RowBox[{"y", "\[Rule]", 
-     RowBox[{"initialcircle", "[", 
-      RowBox[{"[", 
-       RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]], "Input",
- CellChangeTimes->{{3.690507358932417*^9, 3.6905073932370996`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"-", "0.12688756027806528`"}], ",", 
-     RowBox[{"-", "0.07441721212504102`"}], ",", "0.`", ",", 
-     "0.07441721212504102`", ",", "0.12688756027806528`", ",", 
-     "0.13440211636016677`", ",", "0.08676143913961809`", ",", "0.`", ",", 
-     RowBox[{"-", "0.08676143913961809`"}], ",", 
-     RowBox[{"-", "0.13440211636016677`"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.1701150159787812`", ",", "0.24715527417928465`", ",", 
-     "0.2823212366975177`", ",", "0.24715527417928465`", ",", 
-     "0.1701150159787812`", ",", "0.09148933641282941`", ",", 
-     "0.02740414976146251`", ",", "0.`", ",", "0.02740414976146251`", ",", 
-     "0.09148933641282941`"}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{
-  3.690507394586906*^9, {3.690510273996591*^9, 3.6905102826857443`*^9}, {
-   3.6905103186753197`*^9, 3.690510334817491*^9}}]
-}, Open  ]]
+   3.690510272109043*^9, {3.690510316279565*^9, 3.690510365439682*^9}, {
+   3.690510527789196*^9, 3.690510540881486*^9}, {3.6905107331582003`*^9, 
+   3.690510756634297*^9}, {3.690510813363655*^9, 3.690510839746764*^9}, {
+   3.6905118081235027`*^9, 3.690511808717189*^9}, {3.690511885833364*^9, 
+   3.6905118870704927`*^9}, {3.690511988311602*^9, 3.6905119976359577`*^9}, {
+   3.6905120461678143`*^9, 3.690512077431117*^9}, {3.690512310081225*^9, 
+   3.6905123106484003`*^9}, {3.690512404726212*^9, 3.6905124164239607`*^9}, {
+   3.690512454368329*^9, 3.690512454816823*^9}, {3.6905160496491013`*^9, 
+   3.6905161101879177`*^9}, {3.69051646252451*^9, 3.690516462903311*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -218,77 +128,151 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"findGradPoints", "[", 
    RowBox[{"scalarFunc_", ",", "circlePoints_", ",", "x_", ",", "y_"}], "]"}],
-   ":=", "\[IndentingNewLine]", 
-  RowBox[{"Transpose", "[", 
+   ":=", 
+  RowBox[{"Module", "[", 
    RowBox[{
-    RowBox[{"Grad", "[", 
-     RowBox[{
-      RowBox[{"scalarFunc", "[", 
-       RowBox[{"x", ",", "y"}], "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "/.", 
     RowBox[{"{", 
-     RowBox[{
-      RowBox[{"x", "\[Rule]", 
-       RowBox[{"circlePoints", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
-      RowBox[{"y", "\[Rule]", 
-       RowBox[{"circlePoints", "[", 
-        RowBox[{"[", 
-         RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}]}], 
-   "]"}]}]], "Input",
+     RowBox[{"gradFunc", ",", "listGradPoints"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"gradFunc", "=", 
+      RowBox[{"Grad", "[", 
+       RowBox[{
+        RowBox[{"scalarFunc", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"listGradPoints", "=", 
+      RowBox[{"gradFunc", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"x", "\[Rule]", 
+          RowBox[{"circlePoints", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "1"}], "]"}], "]"}]}], ",", 
+         RowBox[{"y", "\[Rule]", 
+          RowBox[{"circlePoints", "[", 
+           RowBox[{"[", 
+            RowBox[{"All", ",", "2"}], "]"}], "]"}]}]}], "}"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Transpose", "[", "listGradPoints", "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.690327733399808*^9, 3.690327858209607*^9}, {
-  3.690507205409244*^9, 3.690507218689246*^9}, {3.6905072495059557`*^9, 
-  3.690507295676264*^9}, {3.6905083629650784`*^9, 3.6905083768248043`*^9}, {
-  3.690509042241108*^9, 3.6905090999976807`*^9}}],
+   3.690507205409244*^9, 3.690507218689246*^9}, {3.6905072495059557`*^9, 
+   3.690507295676264*^9}, {3.6905083629650784`*^9, 3.6905083768248043`*^9}, {
+   3.690509042241108*^9, 3.6905090999976807`*^9}, {3.69051407295382*^9, 
+   3.6905142513151608`*^9}, 3.690516909685911*^9}],
 
 Cell["\<\
 findGradPoints is now a transpose so it yields a list like \
-{{x1,y1},{x2,y2},...,{xn,yn}} rather than {{x1,x1,...,xn},{y1,y2,...,yn}}\
+{{x1,y1},{x2,y2},...,{xn,yn}} rather than {{x1,x1,...,xn},{y1,y2,...,yn}}
+Also look at this pretty module thing. You can define things locally in just \
+this function and then make it so much more readable. Woo, Mathematica! Also \
+Jared. Thanks, Jared.\
 \>", "Text",
- CellChangeTimes->{{3.690509228962988*^9, 3.690509279831758*^9}}],
+ CellChangeTimes->{{3.690509228962988*^9, 3.690509279831758*^9}, {
+  3.690514694102849*^9, 3.69051475821201*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"findMaxPoint", "[", 
    RowBox[{"listCirclePoints_", ",", "listGradPoints_"}], "]"}], ":=", 
-  RowBox[{"Partition", "[", 
+  RowBox[{"Module", "[", 
    RowBox[{
-    RowBox[{"Flatten", "[", 
+    RowBox[{"{", 
      RowBox[{
-      RowBox[{
-       RowBox[{"listCirclePoints", "[", 
-        RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+     "listNorms", ",", "maxPosition", ",", "listMaxPoints", ",", 
+      "listMaxGradPoints", ",", "betterListMaxGradPoints"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"listNorms", "=", 
+      RowBox[{"Norm", "/@", "listGradPoints"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"maxPosition", "=", 
       RowBox[{"Position", "[", 
+       RowBox[{"listNorms", ",", 
+        RowBox[{"Max", "[", "listNorms", "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"listMaxGradPoints", "=", 
+      RowBox[{
        RowBox[{
-        RowBox[{"Norm", "/@", "listGradPoints"}], ",", 
-        RowBox[{"Max", "[", 
-         RowBox[{"Norm", "/@", "listGradPoints"}], "]"}]}], "]"}]}], "]"}], 
-    ",", "2"}], "]"}]}]], "Input",
+        RowBox[{"listCirclePoints", "[", 
+         RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "maxPosition"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"RandomChoice", "[", "listMaxGradPoints", "]"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.690509283130151*^9, 3.690509390496093*^9}, {
-  3.6905095628006563`*^9, 3.690509572644145*^9}}],
+   3.6905095628006563`*^9, 3.690509572644145*^9}, {3.690511815346986*^9, 
+   3.6905118199066963`*^9}, {3.690514391024287*^9, 3.690514601407112*^9}, 
+   3.690514767221208*^9, {3.690514819905901*^9, 3.6905148393787107`*^9}, {
+   3.690514906003718*^9, 3.6905149476509523`*^9}, {3.6905150449148617`*^9, 
+   3.690515073405426*^9}, {3.690516810199686*^9, 3.6905168120787992`*^9}, 
+   3.690516903090179*^9, {3.690516985645318*^9, 3.690517044162068*^9}, {
+   3.690517129408084*^9, 3.6905172719208317`*^9}}],
 
 Cell["\<\
-So, findMaxPoint. This is a thing. Norm/@listGradPoints turns listGradPoints \
-from a list of points to a list of magnitudes.
-Position[listMags, Max[listMags]] finds the position(s) of the max of the list.
-listCirclePoints[[#]]&/@Position yields a list of the position(s) of max of \
-the list.
-Partition[Flatten[positionsList],2] makes the lists not Super Nested, like \
-{{{1,0}},{{-1,0}}} to {{1,0},{-1,0}}\
+So, findMaxPoint. This is a thing.
+listNorms is a list of magnitudes from the list of points.
+maxPosition is a list of the position(s) in the list that have the greatest \
+gradient value.
+listMaxPoints returns a list of the coordinates of points on the circle with \
+the greatest gradient value.
+then we randomly choose one of the points (sometimes, there are more than \
+one) and flattens it (so it looks like {x1,y1})\
 \>", "Text",
- CellChangeTimes->{{3.690509610856101*^9, 3.690509864071795*^9}}]
+ CellChangeTimes->{{3.690509610856101*^9, 3.690509864071795*^9}, {
+  3.6905147733135853`*^9, 3.6905148120661917`*^9}, {3.690514842457355*^9, 
+  3.690514892772492*^9}, {3.690514957384541*^9, 3.6905150301669397`*^9}, {
+  3.690515077250656*^9, 3.690515110589476*^9}, {3.690517294091345*^9, 
+  3.690517345804887*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"findNewCenter", "[", 
+   RowBox[{"ptc_", ",", "ptn_", ",", "d_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"v", ",", " ", "vhat"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"v", "=", 
+      RowBox[{"ptn", "-", "ptc"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"vhat", "=", 
+      RowBox[{"Norm", "[", "v", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"vhat", " ", "d"}], " ", "+", " ", "ptc"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.690510675471957*^9, 3.690510727274247*^9}, {
+   3.690510765983822*^9, 3.690510798260974*^9}, {3.6905108502163277`*^9, 
+   3.690511060413003*^9}, {3.6905111407271433`*^9, 3.690511150510973*^9}, {
+   3.6905122086788683`*^9, 3.6905122113261957`*^9}, {3.690512340355585*^9, 
+   3.6905123579827843`*^9}, 3.69051387481459*^9}],
+
+Cell["\<\
+v is the vector in the direction of the line segment between the initial \
+circle center and the max grad point
+vhat is that in unit vector form
+vhat * d makes it the length we want, add it to ptc to get the offset, woo \
+new center!\
+\>", "Text",
+ CellChangeTimes->{{3.690511188305727*^9, 3.69051124441661*^9}, {
+   3.690511355079033*^9, 3.690511365837947*^9}, {3.6905113977597113`*^9, 
+   3.690511404021728*^9}, {3.690515115141535*^9, 3.690515184918769*^9}, 
+   3.6905157756187067`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["find the point on boundary of circle with maximum gradient", \
-"Subsubsection",
+Cell["\<\
+find the point on boundary of circle with maximum gradient and the new center \
+point\
+\>", "Subsubsection",
  CellChangeTimes->{{3.690326734104047*^9, 3.690326737561265*^9}, {
    3.69032807697911*^9, 3.690328104297097*^9}, {3.6905071391144333`*^9, 
    3.690507139269473*^9}, {3.69050729761178*^9, 3.6905072987165117`*^9}, 
-   3.690509590753935*^9, {3.690509888423676*^9, 3.690509897841509*^9}}],
+   3.690509590753935*^9, {3.690509888423676*^9, 3.690509897841509*^9}, {
+   3.69051595720996*^9, 3.6905159751699753`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -313,24 +297,8 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"1", "+", 
-      RowBox[{"Cos", "[", 
-       FractionBox["\[Pi]", "1000"], "]"}]}], ",", 
-     RowBox[{"-", 
-      RowBox[{"Sin", "[", 
-       FractionBox["\[Pi]", "1000"], "]"}]}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"1", "+", 
-      RowBox[{"Cos", "[", 
-       FractionBox["\[Pi]", "1000"], "]"}]}], ",", 
-     RowBox[{"Sin", "[", 
-      FractionBox["\[Pi]", "1000"], "]"}]}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{
-  3.690510287166554*^9, {3.690510318730001*^9, 3.690510334893301*^9}}]
+  RowBox[{"2", ",", "0"}], "}"}]], "Output",
+ CellChangeTimes->{{3.690517234686863*^9, 3.6905172583920517`*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -339,65 +307,42 @@ Cell[CellGroupData[{
 Cell["draw things", "Subsubsection",
  CellChangeTimes->{{3.690324890099104*^9, 3.6903248920491037`*^9}}],
 
-Cell[BoxData[
+Cell[CellGroupData[{
+
+Cell[BoxData[{
  RowBox[{
   RowBox[{"p0", " ", "=", " ", 
-   RowBox[{"Graphics", "[", "initialCircle", "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.689964888927359*^9, 3.689964894970171*^9}, {
-   3.689965591111452*^9, 3.689965592883629*^9}, {3.689966010320368*^9, 
-   3.6899660117015057`*^9}, {3.690510073308248*^9, 3.690510074086924*^9}, 
-   3.690510198121361*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"p1", " ", "=", " ", 
    RowBox[{"DensityPlot", "[", 
-    RowBox[{
-     RowBox[{
-      RowBox[{"Sin", "[", 
-       RowBox[{"0.3", "x"}], "]"}], 
-      RowBox[{"Sin", "[", 
-       RowBox[{"0.5", "y"}], "]"}]}], ",", 
+    RowBox[{"sunnyshady", ",", 
      RowBox[{"{", 
       RowBox[{"x", ",", 
        RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", 
      RowBox[{"{", 
       RowBox[{"y", ",", 
-       RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.6899649826586146`*^9, 3.689965096199967*^9}, {
-   3.689965401092453*^9, 3.6899654346448073`*^9}, {3.689965583241665*^9, 
-   3.689965587543095*^9}, 3.690510194101688*^9}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"p2", "=", 
-  RowBox[{"Graphics", "[", 
-   RowBox[{"Point", "[", "p", "]"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.690510108011606*^9, 3.690510190656501*^9}, {
-  3.690510300612409*^9, 3.6905103261398067`*^9}}],
-
-Cell[BoxData[
- GraphicsBox[
-  PointBox[NCache[{{
-     1 + Cos[Rational[1, 1000] Pi], -Sin[Rational[1, 1000] Pi]}, {
-     1 + Cos[Rational[1, 1000] Pi], Sin[Rational[1, 1000] Pi]}}, {{
-    1.9999950652018583`, -0.0031415874858795635`}, {1.9999950652018583`, 
-    0.0031415874858795635`}}]]]], "Output",
- CellChangeTimes->{{3.690510326656343*^9, 3.6905103349532337`*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
+       RowBox[{"-", "10"}], ",", "10"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Show", "[", 
-   RowBox[{"p1", ",", "p0", ",", "p2"}], "]"}], 
-  "\[IndentingNewLine]"}]], "Input",
- CellChangeTimes->{{3.689965179448291*^9, 3.6899652579221373`*^9}, {
-   3.6899653002673717`*^9, 3.6899653752648706`*^9}, 3.689965440930436*^9, {
-   3.689965604722813*^9, 3.689965650574398*^9}, {3.690510180952241*^9, 
-   3.6905101824536543`*^9}}],
+  RowBox[{"p1", " ", "=", " ", 
+   RowBox[{"Graphics", "[", "initialCircle", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p2", "=", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Point", "[", "p", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p3", "=", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{"Circle", "[", 
+     RowBox[{"ptnew", ",", "rg"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"p0", ",", "p1", ",", "p2", ",", "p3", ",", 
+   RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.689964888927359*^9, 3.689964894970171*^9}, {
+   3.689965591111452*^9, 3.689965592883629*^9}, {3.689966010320368*^9, 
+   3.6899660117015057`*^9}, {3.690510073308248*^9, 3.690510074086924*^9}, 
+   3.690510198121361*^9, {3.690515938077688*^9, 3.690515945933782*^9}, {
+   3.690517372263686*^9, 3.690517451825108*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{GraphicsComplexBox[CompressedData["
@@ -593,12 +538,8 @@ bgWYOYF3br4T4JSqDTPMmI+dDxOqHt4tF1sXd06QscbgMcsb0bGr4f6+a2ws
 3GSvxXjMgGTFTsFTke/bsOSXvK3I982Xl87w2VMuti7unGuzM6qVRH7555k6
 zVCRX9ZuNBpv7Cfym3lOvpqiee+j6XG8FTyoSzQFOMgzxNbFnfMfq1zJwA==
 
-     "]], CircleBox[{1, 0}], 
-   PointBox[NCache[{{
-      1 + Cos[Rational[1, 1000] Pi], -Sin[Rational[1, 1000] Pi]}, {
-      1 + Cos[Rational[1, 1000] Pi], Sin[Rational[1, 1000] Pi]}}, {{
-     1.9999950652018583`, -0.0031415874858795635`}, {1.9999950652018583`, 
-     0.0031415874858795635`}}]]},
+     "]], CircleBox[{1, 0}], PointBox[{2, 0}], 
+   CircleBox[{1.1, 0.10000000000000009}, 1.1]},
   AspectRatio->1,
   AxesLabel->{None, None},
   DisplayFunction->Identity,
@@ -607,6 +548,7 @@ zVCRX9ZuNBpv7Cfym3lOvpqiee+j6XG8FTyoSzQFOMgzxNbFnfMfq1zJwA==
   FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
+  ImageSize->Medium,
   Method->{
    "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic, 
     "ScalingFunctions" -> None},
@@ -618,26 +560,11 @@ zVCRX9ZuNBpv7Cfym3lOvpqiee+j6XG8FTyoSzQFOMgzxNbFnfMfq1zJwA==
      Scaled[0.02], 
      Scaled[0.02]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.689965618811222*^9, 3.6899656513804784`*^9}, 
-   3.690325442591358*^9, 3.6903281096417017`*^9, {3.690507257455203*^9, 
-   3.69050726560791*^9}, 3.6905100792130337`*^9, 3.690510182938349*^9, {
-   3.6905102741345673`*^9, 3.690510282808662*^9}, {3.690510318782469*^9, 
-   3.690510334965407*^9}}]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.6899655978361244`*^9, 3.6899655978601265`*^9}}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.6899652892972746`*^9, 3.689965296579003*^9}}],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.689965944997837*^9, 3.689965966497987*^9}, {
-   3.6899660185281887`*^9, 3.689966021649501*^9}, 3.689966114590794*^9, {
-   3.689966269533287*^9, 3.689966271088442*^9}}]
+ CellChangeTimes->{{3.690517388542635*^9, 3.690517452821146*^9}}]
+}, Open  ]]
 }, Open  ]]
 },
-WindowSize->{960, 1016},
+WindowSize->{1920, 1016},
 WindowMargins->{{0, Automatic}, {0, 37}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
@@ -655,51 +582,32 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 107, 1, 35, "Subsubsection"],
-Cell[690, 25, 4005, 77, 238, "Input"],
-Cell[CellGroupData[{
-Cell[4720, 106, 295, 8, 32, "Input"],
-Cell[5018, 116, 562, 15, 32, "Output"]
+Cell[690, 25, 4579, 82, 262, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5617, 136, 428, 12, 35, "Input"],
-Cell[6048, 150, 273, 7, 32, "Output"]
+Cell[5306, 112, 116, 1, 35, "Subsubsection"],
+Cell[5425, 115, 305, 9, 33, "Input"],
+Cell[5733, 126, 1492, 38, 128, "Input"],
+Cell[7228, 166, 452, 8, 55, "Text"],
+Cell[7683, 176, 1620, 35, 148, "Input"],
+Cell[9306, 213, 757, 14, 121, "Text"],
+Cell[10066, 229, 910, 20, 114, "Input"],
+Cell[10979, 251, 498, 10, 77, "Text"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6358, 162, 432, 12, 35, "Input"],
-Cell[6793, 176, 927, 20, 52, "Output"]
+Cell[11514, 266, 455, 8, 35, "Subsubsection"],
+Cell[11972, 276, 393, 9, 35, "Input"],
+Cell[CellGroupData[{
+Cell[12390, 289, 353, 6, 35, "Input"],
+Cell[12746, 297, 141, 3, 32, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7769, 202, 116, 1, 35, "Subsubsection"],
-Cell[7888, 205, 305, 9, 33, "Input"],
-Cell[8196, 216, 1027, 27, 59, "Input"],
-Cell[9226, 245, 224, 4, 33, "Text"],
-Cell[9453, 251, 683, 18, 83, "Input"],
-Cell[10139, 271, 497, 9, 99, "Text"]
-}, Open  ]],
+Cell[12936, 306, 104, 1, 35, "Subsubsection"],
 Cell[CellGroupData[{
-Cell[10673, 285, 371, 5, 35, "Subsubsection"],
-Cell[11047, 292, 393, 9, 35, "Input"],
-Cell[CellGroupData[{
-Cell[11465, 305, 353, 6, 35, "Input"],
-Cell[11821, 313, 601, 19, 47, "Output"]
+Cell[13065, 311, 1279, 33, 128, "Input"],
+Cell[14347, 346, 12300, 216, 367, "Output"]
 }, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[12471, 338, 104, 1, 35, "Subsubsection"],
-Cell[12578, 341, 366, 7, 35, "Input"],
-Cell[12947, 350, 659, 18, 35, "Input"],
-Cell[CellGroupData[{
-Cell[13631, 372, 235, 5, 35, "Input"],
-Cell[13869, 379, 369, 7, 33, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[14275, 391, 379, 8, 51, "Input"],
-Cell[14657, 401, 12730, 223, 367, "Output"]
-}, Open  ]],
-Cell[27402, 627, 96, 1, 30, "Input"],
-Cell[27501, 630, 94, 1, 30, "Input"],
-Cell[27598, 633, 216, 3, 30, "Input"]
 }, Open  ]]
 }
 ]
